@@ -12,15 +12,17 @@
 body {
   background-color: #fff;
   color: #555;
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
 }
 
-.clearfix {zoom: 1}
+.clearfix {
+  zoom: 1;
+}
 .clearfix:after {
-  content: '.';
+  content: ".";
   clear: both;
   display: block;
   height: 0;
@@ -35,7 +37,7 @@ body {
 }
 
 section {
-  padding: 80px 0;;
+  padding: 80px 0;
 }
 
 .box {
@@ -46,20 +48,22 @@ section {
 /* Header                   */
 /*--------------------------*/
 header {
-  background-image: linear-gradient(rgba(146, 180, 241, 0.8), rgba(0, 0, 0, 0.8)),url(DoveBackground1.jpg);
+  background-image: linear-gradient(
+      rgba(146, 180, 241, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(DoveBackground1.jpg);
   background-size: cover;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   height: 100vh;
   opacity: 0.9;
-
 }
 
 .logo-div {
   height: 80vh;
-width: 100%;
-margin-left: 20%;
-margin-right: 20%;
-
+  width: 100%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .logo {
   height: 100%;
@@ -85,7 +89,7 @@ margin-right: 20%;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 150%;
+  font-size: 140%;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s;
 }
@@ -99,7 +103,7 @@ margin-right: 20%;
   position: absolute;
   width: 1140px;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -175,7 +179,6 @@ h3 {
   text-decoration: none;
   border-radius: 200px;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
-
 }
 
 .btn-full:link,
