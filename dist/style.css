@@ -46,7 +46,7 @@ section {
 /* Header                   */
 /*--------------------------*/
 header {
-  background-image: linear-gradient(rgba(146, 180, 241, 0.8), rgba(0, 0, 0, 0.8)),url(../DoveBackground1.jpg);
+  background-image: linear-gradient(rgba(146, 180, 241, 0.8), rgba(0, 0, 0, 0.8)),url(DoveBackground1.jpg);
   background-size: cover;
     background-repeat: no-repeat;
   height: 100vh;
