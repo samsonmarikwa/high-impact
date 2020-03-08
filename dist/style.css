@@ -10,6 +10,7 @@
 }
 
 body {
+  width: 100%;
   background-color: #fff;
   color: #555;
   font-family: "Lato", "Arial", sans-serif;
@@ -99,13 +100,21 @@ header {
   border-bottom: 2px solid #e67e22;
 }
 
-.hero-text-box {
+.home {
+  border: 1px solid #fff;
+  color: #fff;
+  /* background-color: #808080; */
+  background-color:
+  /* width: 100%; */
+}
+
+/* .hero-text-box {
   position: absolute;
   width: 1140px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 h1,
 h2,
