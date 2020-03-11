@@ -6,14 +6,15 @@
           :autoplay="autoplay"
           :autoplay-timeout="5000"
           :display="5"
-          :width="450"
-          :height="400"
+          :width="630"
+          :height="550"
           :space="350"
         >
           <slide v-for="(slide, i) in slides" :index="i" :key="i">
-            <figure @mouseover="stopAutoplay">
+            <figure @click="stopAutoplay">
+              <!-- @click should enlarge play area and load component with iframe -->
               <p class="title">{{ slide.videoTitle }}</p>
-              <img :src="slide.image" width="100%" height="100%" alt="Image" />
+              <img :src="slide.image" width="100%" height="520" alt="Image" />
               <!-- <iframe
             width="100%"
             height="400"
