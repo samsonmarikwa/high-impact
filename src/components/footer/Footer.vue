@@ -73,6 +73,7 @@
     </div>
     <div class="row">
       <div class="col-md-12" style="text-align: center">
+        <hr>
         <h6>Copyright &copy;2020 High Impact Life Church</h6>
       </div>
   </div>
