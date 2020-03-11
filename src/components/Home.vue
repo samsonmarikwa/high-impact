@@ -1,166 +1,146 @@
 <template>
-  <div class="home">
-    <div class="card" style="max-width: 100%;">
-      <div class="row main-video">
-        <div class="col-md-12">
-          <div class="carousel-view">
-            <transition-group class="carousel" tag="div">
-              <div v-for="slide in slides" class="slide" :key="slide.id">
-                <h4>{{ slide.title }}</h4>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </transition-group>
-            <div class="carousel-controls">
-              <button class="carousel-controls__button" @click="previous">
-                prev
-              </button>
-              <button class="carousel-controls__button" @click="next">
-                next
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row main-video">
-        <div class="col-md-12">
-          <div class="card-body">
-            <h4 class="card-title">Testimonies</h4>
-            <ul style="list-style-type:none">
-              <router-link to="/" tag="li">
-                <h5>Testimony One</h5>
-                <p>
-                  Describe situation and how God intervened
-                  <span>
-                    <a>Learn more</a>
-                  </span>
-                </p>
-              </router-link>
-              <router-link to="/" tag="li">
-                <h5>Testimony Two</h5>
-                <p>
-                  Now Describe situation and how God intervened
-                  <span>
-                    <a>Learn more</a>
-                  </span>
-                </p>
-              </router-link>
-              <router-link to="/" tag="li">
-                <h5>Testimony Three</h5>
-                <p>
-                  Describe situation and how God intervened
-                  <span>
-                    <a>Learn more</a>
-                  </span>
-                </p>
-              </router-link>
-              <router-link to="/" tag="li">
-                <a>Click for more testimonies ...</a>
-              </router-link>
-            </ul>
-          </div>
-        </div>
+  <div>
+    <div class="row">
+      <div class="col-md-12">
+        <carousel-3d
+          :autoplay="autoplay"
+          :autoplay-timeout="5000"
+          :display="5"
+          :width="450"
+          :height="400"
+          :space="350"
+        >
+          <slide v-for="(slide, i) in slides" :index="i" :key="i">
+            <figure @mouseover="stopAutoplay">
+              <p class="title">{{ slide.videoTitle }}</p>
+              <img :src="slide.image" width="100%" height="100%" alt="Image" />
+              <!-- <iframe
+            width="100%"
+            height="400"
+            :src="slide.src"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+              ></iframe>-->
+              <figcaption>{{ slide.figCaption }}</figcaption>
+            </figure>
+          </slide>
+        </carousel-3d>
       </div>
     </div>
-
-    <div class="footer">
-      <app-footer />
+    <div class="row">
+      <div class="col-md-12">
+        <app-footer />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { Carousel3d, Slide } from "vue-carousel-3d";
 import Footer from "./footer/Footer.vue";
 export default {
   components: {
+    "carousel-3d": Carousel3d,
+    slide: Slide,
     appFooter: Footer
   },
   data() {
     return {
+      autoplay: true,
       slides: [
         {
-          title: "I am Slide A",
-          id: 1,
-          src: "https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0"
+          videoTitle: "Singing in tongues",
+          image: "https://img.youtube.com/vi/CEC4otBiFyc/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
         },
         {
-          title: "I am Slide B",
-          id: 2,
-          src: "https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0"
+          videoTitle: "The demands of prophecy",
+          image: "https://img.youtube.com/vi/9I3J9PqKpBg/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/9I3J9PqKpBg?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
         },
         {
-          title: "I am Slide C",
-          id: 3,
-          src: "https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0"
+          videoTitle: "Prophetic move",
+          image: "https://img.youtube.com/vi/gk9AgKe2xDw/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/gk9AgKe2xDw?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
         },
         {
-          title: "I am Slide D",
-          id: 4,
-          src: "https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0"
+          videoTitle: "Power in praying in tongues",
+          image: "https://img.youtube.com/vi/Sm1_8JMTJZ8/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/Sm1_8JMTJZ8?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
         },
         {
-          title: "I am Slide E",
-          id: 5,
-          src: "https://www.youtube-nocookie.com/embed/CEC4otBiFyc?rel=0"
+          videoTitle: "Prophetic Message for Zimbabwe 1",
+          image: "https://img.youtube.com/vi/sj_XVY1I3TU/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/sj_XVY1I3TU?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
+        },
+        {
+          videoTitle: "Prophetic Message for Zimbabwe 2",
+          image: "https://img.youtube.com/vi/fLvqOhn8pxw/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/fLvqOhn8pxw?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
+        },
+        {
+          videoTitle: "Prophetic Message for Mnangagwa",
+          image: "https://img.youtube.com/vi/DQ5gw0Po6lQ/maxresdefault.jpg",
+          src: "https://www.youtube-nocookie.com/embed/DQ5gw0Po6lQ?rel=0",
+          figCaption:
+            "The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly! The sky is the limit only for those who aren't afraid to fly!"
         }
       ]
     };
   },
   methods: {
-    next() {
-      const first = this.slides.shift();
-      this.slides = this.slides.concat(first);
-    },
-    previous() {
-      const last = this.slides.pop();
-      this.slides = [last].concat(this.slides);
+    stopAutoplay() {
+      this.autoplay = false;
+      console.log(this.autoplay);
     }
   }
 };
 </script>
 
 <style scoped>
-.carousel-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.row {
+  /* padding: 1px; */
+  margin: 0 auto;
 }
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.col-md-4 {
+  padding: 0px;
+  margin: 0px;
+}
 
-  width: 100%;
-  /* 24em; */
-  min-height: 35em;
+.carousel-3d-container .carousel-3d-slide {
+  padding: 0px;
 }
-.slide {
-  flex: 0 0 33%;
-  height: 30em;
-  /* margin: 1em; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.1em solid #000;
-  /* border-radius: 50%; */
-  transition: transform 0.3s ease-in-out;
+
+.carousel-3d-container .carousel-3d-slide .title {
+  font-size: 18px;
 }
-.slide:first-of-type {
-  opacity: 0;
+
+.carousel-3d-container figure {
+  margin: 0;
 }
-.slide:last-of-type {
-  opacity: 0;
-}
-.carousel-controls__button {
+
+.carousel-3d-container figcaption {
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  background-color: #555;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  font-size: 12px;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 </style>

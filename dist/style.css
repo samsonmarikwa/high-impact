@@ -58,6 +58,7 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
   opacity: 0.9;
+    width: 100%;
 }
 
 .logo-div {
@@ -100,13 +101,6 @@ header {
   border-bottom: 2px solid #e67e22;
 }
 
-.home {
-  border: 1px solid #fff;
-  color: #fff;
-  /* background-color: #808080; */
-  background-color:
-  /* width: 100%; */
-}
 
 /* .hero-text-box {
   position: absolute;
