@@ -1,8 +1,9 @@
 <template>
   <div>
-    <router-view name="header-top"></router-view>
+    <app-header />
+    <!-- <router-view name="header-top"></router-view> -->
     <router-view></router-view>
-    <router-view name="header-bottom"></router-view>
+    <!-- <router-view name="header-bottom"></router-view> -->
   </div>
 </template>
 
@@ -16,5 +17,9 @@ export default {
 </script>
 
 <style>
+.row {
+  margin: 0;
+  padding: 0;
+}
 
 </style>

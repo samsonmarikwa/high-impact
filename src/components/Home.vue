@@ -6,33 +6,39 @@
           :autoplay="autoplay"
           :autoplay-timeout="5000"
           :display="5"
-          :width="630"
+          :width="750"
           :height="550"
           :space="350"
         >
           <slide v-for="(slide, i) in slides" :index="i" :key="i">
-            <figure @click="stopAutoplay">
-              <!-- @click should enlarge play area and load component with iframe -->
+            <figure>
               <p class="title">{{ slide.videoTitle }}</p>
-              <img :src="slide.image" width="100%" height="520" alt="Image" />
-              <!-- <iframe
-            width="100%"
-            height="400"
-            :src="slide.src"
-            frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-              ></iframe>-->
-              <figcaption>{{ slide.figCaption }}</figcaption>
+                <img :src="slide.image" width="100%" height="520" alt="Image" />
+                <!-- <iframe
+                width="100%"
+                height="400"
+                :src="slide.src"
+                frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ></iframe>-->
+                <figcaption>
+                  <div>
+                  {{ slide.figCaption }}
+                  </div>
+                  <div class="play">
+                  <button @click="playVideo(i)"><img src="youtube-play-button.png" class="icons"/></button>
+                  </div>
+                  </figcaption>
             </figure>
           </slide>
         </carousel-3d>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row footer">
+      <!-- <div class="col-md-12"> -->
         <app-footer />
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -40,11 +46,23 @@
 <script>
 import { Carousel3d, Slide } from "vue-carousel-3d";
 import Footer from "./footer/Footer.vue";
+// import router from "vue-router";
+
 export default {
   components: {
     "carousel-3d": Carousel3d,
     slide: Slide,
     appFooter: Footer
+  },
+  methods: {
+    playVideo(index) {
+      console.log("Image clicked" + index);
+      console.log(this.slides[index].videoTitle);
+      this.$router.push({ name: 'video', params: {
+        title: this.slides[index].videoTitle,
+        src: this.slides[index].src
+      }})
+    }
   },
   data() {
     return {
@@ -101,17 +119,16 @@ export default {
         }
       ]
     };
-  },
-  methods: {
-    stopAutoplay() {
-      this.autoplay = false;
-      console.log(this.autoplay);
-    }
   }
 };
 </script>
 
 <style scoped>
+.footer {
+  color: #636e72;
+  background-color: #a9a9a9;
+  /* height: 30vh; */
+}
 .row {
   /* padding: 1px; */
   margin: 0 auto;
@@ -139,9 +156,24 @@ export default {
   bottom: 0;
   position: absolute;
   bottom: 0;
-  padding: 15px;
+  padding: 10px 5px 0px;
   font-size: 12px;
   min-width: 100%;
   box-sizing: border-box;
+}
+
+.play {
+  border-top: 1px solid #a9a9a9;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.icons {
+  margin-top: 2.5px;
+  height: 25px;
+  width: 55px;
+}
+.icons-opacity {
+  opacity: 0.5;
 }
 </style>

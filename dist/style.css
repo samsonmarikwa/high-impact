@@ -48,24 +48,34 @@ section {
 /*--------------------------*/
 /* Header                   */
 /*--------------------------*/
-header {
-  background-image: linear-gradient(
+.background {
+  opacity: 0.9;
+    height: 100vh;
+}
+
+.row1 {
+    background-image: linear-gradient(
       rgba(146, 180, 241, 0.8),
       rgba(0, 0, 0, 0.8)
     ),
     url(DoveBackground1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 10vh;
   opacity: 0.9;
-    width: 100%;
 }
 
 .logo-div {
-  height: 80vh;
-  width: 100%;
-  margin-left: 20%;
-  margin-right: 20%;
+  text-align: center;
+    background-image: linear-gradient(
+      rgba(146, 180, 241, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(DoveBackground1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  height: 90vh;
 }
 .logo {
   height: 100%;
@@ -73,42 +83,6 @@ header {
   margin: 0 auto;
   opacity: 0.4;
 }
-
-.main-nav {
-  float: right;
-  list-style: none;
-  margin: 30px 40px 5px;
-}
-
-.main-nav li {
-  display: inline-block;
-  margin-left: 40px;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-  padding: 8px 0;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 140%;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s;
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
-}
-
-
-/* .hero-text-box {
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 
 h1,
 h2,

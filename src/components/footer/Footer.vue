@@ -1,22 +1,11 @@
 <template>
   <div class="footer">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3">
-        <h4>Info</h4>
-      </div>
-      <div class="col-md-3">
-        <h4>Ministries</h4>
-      </div>
-      <div class="col-md-3">
-        <h4>Visit Us</h4>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 logo-col">
         <img :src="logoSrc" alt="High Impact Life Church" class="logo" />
       </div>
       <div class="col-md-3">
+                <h4>Info</h4>
         <p>
           <span>
             <img :src="addressIcon" alt="Address: " class="icons" />
@@ -51,6 +40,7 @@
         </p>
       </div>
       <div class="col-md-3">
+                <h4>Ministries</h4>
         <ul>
           <router-link to="/" tag="li" active-class="active">
             <a>High Impact Ladies</a>
@@ -67,13 +57,13 @@
         </ul>
       </div>
       <div class="col-md-3">
+                <h4>Visit Us</h4>
         <p>Events Calendar</p>
         <p>Chat online</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12" style="text-align: center">
-        <hr>
+    <div class="row copyright">
+      <div class="col-md-12">
         <h6>Copyright &copy;2020 High Impact Life Church</h6>
       </div>
   </div>
@@ -94,21 +84,30 @@ export default {
 </script>
 
 <style scoped>
-.footer {
-  color: #636e72;
-  background-color: #a9a9a9;
-  height: 40vh;
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.copyright {
+  padding: 10px 5px;
+  margin-top: 8px;
+  border-top: 1px solid #636e72;
+  text-align: center
+}
+h4 {
+  color: #3f4242;
 }
 
 .footer a {
   color: #636e72;
 }
-
+.logo-col {
+  text-align: center;
+}
 .logo {
-  margin-left: 20%;
-  margin-right: 20%;
-  height: 30vh;
-  max-width: 60%;
+  margin-top: 10px;
+  height: 15vh;
+  max-width: 40%;
 }
 
 .icons,
