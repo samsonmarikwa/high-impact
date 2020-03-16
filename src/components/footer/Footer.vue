@@ -84,10 +84,6 @@ export default {
 </script>
 
 <style scoped>
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
 .copyright {
   padding: 10px 5px;
   margin-top: 8px;
@@ -98,6 +94,10 @@ h4 {
   color: #3f4242;
 }
 
+.footer {
+  color: #636e72;
+  background-color: #a9a9a9;
+}
 .footer a {
   color: #636e72;
 }
@@ -105,9 +105,9 @@ h4 {
   text-align: center;
 }
 .logo {
-  margin-top: 10px;
-  height: 15vh;
-  max-width: 40%;
+  margin-top: 4vh;
+  height: 10vh;
+  max-width: 30%;
 }
 
 .icons,

@@ -1,54 +1,40 @@
 <template>
-  <div class="background">
-    <!-- <header> -->
-
-    <div class="row1">
-      <nav>
-        <ul class="main-nav">
-          <router-link to="/" tag="li" active-class="active" exact>
-            <a>Home</a>
-          </router-link>
-          <router-link to="/about" tag="li" active-class="active">
-            <a>About</a>
-          </router-link>
-          <router-link to="/media" tag="li" active-class="active">
-            <a>Media</a>
-          </router-link>
-          <router-link to="/give" tag="li" active-class="active">
-            <a>Give</a>
-          </router-link>
-          <router-link to="/events" tag="li" active-class="active">
-            <a>Events</a>
-          </router-link>
-          <router-link to="/contacts" tag="li" active-class="active">
-            <a>Contacts</a>
-          </router-link>
-        </ul>
-      </nav>
-    </div>
-    <div class="logo-div">
-      <img :src="logoSrc" alt="High Impact Life Church" class="logo" />
-    </div>
-    <!-- </header> -->
+  <div class="nav-background">
+    <nav>
+      <ul class="main-nav">
+        <router-link to="/" tag="li" active-class="active" exact>
+          <a>Home</a>
+        </router-link>
+        <router-link to="/about" tag="li" active-class="active">
+          <a>About</a>
+        </router-link>
+        <router-link to="/media" tag="li" active-class="active">
+          <a>Media</a>
+        </router-link>
+        <router-link to="/give" tag="li" active-class="active">
+          <a>Give</a>
+        </router-link>
+        <router-link to="/events" tag="li" active-class="active">
+          <a>Events</a>
+        </router-link>
+        <router-link to="/contacts" tag="li" active-class="active">
+          <a>Contacts</a>
+        </router-link>
+      </ul>
+    </nav>
   </div>
 </template>
 
 <script>
-export default {
-  data: function() {
-    return {
-      logoSrc: "logo.png"
-    };
-  }
-};
 </script>
 
 <style scoped>
 .main-nav {
-  height: 5vh;
+  line-height: 4vh;
   float: right;
   list-style: none;
-  margin: 30px 40px 5px;
+  margin: auto;
+  padding: 20px;
 }
 
 .main-nav li {
