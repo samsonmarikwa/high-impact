@@ -1,4 +1,36 @@
-/* Orange color: #e67e22 */
+/* Media Queries */
+/* desktops and Laptops */
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+    .column {
+        text-align: left;
+        width: 48%;
+    }
+}
+
+/* Tablets & Small Laptops */
+    @media screen and (max-width: 768px) {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+
+/* Smartphones */
+@media screen and (max-width: 500px) {
+    main#home h1 {
+        margin-top: 10vh;
+    }
+    .menu-display {
+        width: 80%;
+        height: 50vh;
+    }
+
+}
 
 /*--------------------------*/
 /* Basic setup              */
@@ -68,8 +100,8 @@ section {
     url(DoveBackground1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.9;
-  height: 90vh;
+  opacity: 0.8;
+  height: 95vh;
 }
 
 
