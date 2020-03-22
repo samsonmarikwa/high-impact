@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "body">
     <app-header />
     <router-view></router-view>
   </div>
@@ -18,6 +18,7 @@ export default {
 .row {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 </style>

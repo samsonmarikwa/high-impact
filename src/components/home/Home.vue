@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row carousel-row">
       <div class="col-md-12">
         <video-carousel />
       </div>
@@ -47,26 +47,35 @@ export default {
   text-align: center;
 }
 
-.logo {
-  padding: 5vh;
-  height: 80vh;
-  max-width: 90%;
-  margin: 0 auto;
-  opacity: 0.6;
-}
 .couple {
-  padding-top: 2vh;
+  padding-top: 3vh;
   height: 30vh;
   max-width: 80%;
-  margin: 0 auto;
-  opacity: 0.8;
 }
 
 .angels {
   padding: 10px;
   height: 60vh;
   max-width: 100%;
+}
+
+.couple,
+.angels {
   margin: 0 auto;
-  opacity: 0.8;
+  opacity: 0.7;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: scale(0.9);
+}
+
+.couple:hover,
+.angels:hover {
+  opacity: 1;
+}
+
+.couple:hover {
+  transform: scale(1.2);
+}
+.angels:hover {
+  transform: scale(1);
 }
 </style>

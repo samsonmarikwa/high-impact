@@ -1,7 +1,8 @@
 <template>
   <div class="home-background">
     <div class="row">
-        <div>
+      <div class="card text-center">
+        <div class="card-header">
           <iframe
             class="iframe"
             :src="youtubeData.videoSrc"
@@ -14,6 +15,7 @@
         </div>
         <div class="card-footer text-muted text-center">{{ youtubeData.videoDate }}</div>
       </div>
+    </div>
     <div class="row">
       <app-footer />
     </div>
@@ -40,23 +42,5 @@ export default {
   max-width: 60%;
   margin: 0 auto;
   opacity: 0.4;
-}
-.iframe {
-  width: 100%;
-  height: 80vh;
-}
-
-.card-body {
-  height: 10vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-.card-text {
-  padding: 10px;
-}
-.card-footer {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  height: 5vh;
 }
 </style>

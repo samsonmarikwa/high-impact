@@ -5,7 +5,7 @@
         <img :src="logoSrc" alt="High Impact Life Church" class="logo" />
       </div>
       <div class="col-md-3">
-                <h4>Info</h4>
+        <h4>Info</h4>
         <p>
           <span>
             <img :src="addressIcon" alt="Address: " class="icons" />
@@ -40,7 +40,7 @@
         </p>
       </div>
       <div class="col-md-3">
-                <h4>Ministries</h4>
+        <h4>Ministries</h4>
         <ul>
           <router-link to="/" tag="li" active-class="active">
             <a>High Impact Ladies</a>
@@ -57,7 +57,7 @@
         </ul>
       </div>
       <div class="col-md-3">
-                <h4>Visit Us</h4>
+        <h4>Visit Us</h4>
         <p>Events Calendar</p>
         <p>Chat online</p>
       </div>
@@ -66,6 +66,7 @@
       <div class="col-md-12">
         <h6>Copyright &copy;2020 High Impact Life Church</h6>
       </div>
+    </div>
   </div>
 </template>
 
@@ -88,7 +89,7 @@ export default {
   padding: 10px 5px;
   margin-top: 8px;
   border-top: 1px solid #636e72;
-  text-align: center
+  text-align: center;
 }
 h4 {
   color: #3f4242;
@@ -126,5 +127,6 @@ a {
 
 .col-md-3 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 </style>

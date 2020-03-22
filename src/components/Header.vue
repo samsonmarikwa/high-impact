@@ -3,22 +3,22 @@
     <nav>
       <ul class="main-nav">
         <router-link to="/" tag="li" active-class="active" exact>
-          <a>Home</a>
+          <a class="btn">Home</a>
         </router-link>
         <router-link to="/about" tag="li" active-class="active">
-          <a>About</a>
+          <a class="btn">About</a>
         </router-link>
         <router-link to="/media" tag="li" active-class="active">
-          <a>Media</a>
+          <a class="btn">Media</a>
         </router-link>
         <router-link to="/give" tag="li" active-class="active">
-          <a>Give</a>
+          <a class="btn">Give</a>
         </router-link>
         <router-link to="/events" tag="li" active-class="active">
-          <a>Events</a>
+          <a class="btn">Events</a>
         </router-link>
         <router-link to="/contacts" tag="li" active-class="active">
-          <a>Contacts</a>
+          <a class="btn">Contacts</a>
         </router-link>
       </ul>
     </nav>
@@ -30,25 +30,24 @@
 
 <style scoped>
 .main-nav {
-  line-height: 4vh;
+  line-height: 2vh;
   float: right;
   list-style: none;
   margin: auto;
-  padding: 20px;
+  padding: 8px;
 }
 
 .main-nav li {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 5px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-  padding: 8px 0;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 140%;
+  font-size: 110%;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.2s;
 }
