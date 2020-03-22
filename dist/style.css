@@ -58,7 +58,7 @@
       rgba(0, 0, 0, 0.8)
     ),
     url(DoveBackground1.jpg);
-  background-size: cover;
+  background-size:100% 100%;
   background-repeat: no-repeat;
   opacity: 0.8;
   height: 100vh;
