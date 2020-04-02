@@ -17,7 +17,7 @@
         <video-carousel />
       </div>
     </div>
-    <div class="row">
+    <div class="row footer-row">
       <app-footer />
     </div>
   </div>
@@ -77,5 +77,10 @@ export default {
 }
 .angels:hover {
   transform: scale(1);
+}
+
+.footer-row
+{
+  margin-top: 12vh;
 }
 </style>
