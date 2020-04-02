@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="row">
       <div class="col-md-3 logo-col">
-        <img :src="logoSrc" alt="High Impact Life Church" class="logo" />
+        <img :src="logoSrc" alt="High Impact Life Church" class="footer-logo" />
       </div>
       <div class="col-md-3">
         <h4>Info</h4>
@@ -105,10 +105,10 @@ h4 {
 .logo-col {
   text-align: center;
 }
-.logo {
+.footer-logo {
   margin-top: 4vh;
-  height: 10vh;
-  max-width: 30%;
+  height: 15vh;
+  max-width: 40%;
 }
 
 .icons,

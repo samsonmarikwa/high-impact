@@ -24,7 +24,7 @@
   background-color: #fff;
   color: #555;
   font-family: "Lato", "Arial", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   letter-spacing: 1.5px;
@@ -66,14 +66,16 @@
 }
 
 .about {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)),
     url(DoveBackground1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   opacity: 0.6;
-  color: rgb(248, 233, 233);
+  color: #fff;
   padding: 25px 50px;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: screen; */
 }
 
 .about > h1,
