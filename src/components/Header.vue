@@ -39,7 +39,7 @@
 
 .main-nav li {
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 .main-nav li a:link,
@@ -54,6 +54,6 @@
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 2px solid #e67318;
 }
 </style>

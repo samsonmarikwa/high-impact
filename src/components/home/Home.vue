@@ -49,11 +49,12 @@ export default {
 
 .couple {
   padding-top: 3vh;
-  height: 30vh;
-  max-width: 80%;
+  height: 35vh;
+  max-width: 90%;
 }
 
 .angels {
+  margin-top: 20px;
   padding: 10px;
   height: 60vh;
   max-width: 100%;
@@ -64,7 +65,7 @@ export default {
   margin: 0 auto;
   opacity: 0.7;
   transition: transform 0.5s, opacity 0.5s;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 }
 
 .couple:hover,
@@ -74,9 +75,6 @@ export default {
 
 .couple:hover {
   transform: scale(1.2);
-}
-.angels:hover {
-  transform: scale(1);
 }
 
 .footer-row

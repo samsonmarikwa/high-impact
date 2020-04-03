@@ -96,6 +96,7 @@ h4 {
 }
 
 .footer {
+  font-size: 0.9em;
   color: #636e72;
   background-color: #a9a9a9;
 }

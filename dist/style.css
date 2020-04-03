@@ -84,7 +84,7 @@
 .about > h4 {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #cf6d17;
+  color: #e67318;
 }
 
 .logo {
@@ -144,8 +144,8 @@
 
   .logo {
     padding: 1vh;
-    height: 20vh;
-    max-width: 90%;
+    height: 25vh;
+    max-width: 95%;
     margin: 0 auto;
     opacity: 0.6;
   }
@@ -201,5 +201,5 @@
 
 .btn:hover,
 .btn:active {
-  background-color: #cf6d17;
+  background-color: #e67318;
 }

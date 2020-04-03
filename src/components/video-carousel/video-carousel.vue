@@ -138,7 +138,7 @@ export default {
 
 .video-date {
   padding: 8px;
-  font: 12px cursive #cf6d17;
+  font: 12px cursive #e67318;
   text-align: center;
 }
 .carousel-3d-container .carousel-3d-slide .title {
@@ -168,7 +168,7 @@ export default {
 }
 
 .play {
-  border-top: 1px solid #a9a9a9;
+  border-top: 1px solid #4e4848;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
