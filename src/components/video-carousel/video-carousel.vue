@@ -15,7 +15,7 @@
 
           <figcaption>
             <div>{{ slide.figCaption }}</div>
-            <div class="video-date text-muted">Date Published: {{ slide.videoDate }}</div>
+            <div class="video-date">Date Published: {{ slide.videoDate }}</div>
             <div class="play">
               <button @click="playVideo(i)">
                 <img src="youtube-play-button.png" class="icons" />
@@ -138,8 +138,9 @@ export default {
 
 .video-date {
   padding: 8px;
-  font: 12px cursive #e67318;
+  font: 12px cursive;
   text-align: center;
+  color: #bfbfbf;
 }
 .carousel-3d-container .carousel-3d-slide .title {
   font-size: 18px;
